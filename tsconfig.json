@@ -2,9 +2,17 @@
   "compilerOptions": {
     "outDir": "./dist",
     "module": "CommonJS",
-    "target": "ES2021",
+    "target": "ES2020",
     "esModuleInterop": true,
     "allowJs": true,
-    "alwaysStrict": true
+    "noEmitOnError": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true
   }
 }
