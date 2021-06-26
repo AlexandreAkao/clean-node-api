@@ -20,9 +20,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  },
   "bugs": {
     "url": "https://github.com/AlexandreAkao/clean-node-api/issues"
   },
