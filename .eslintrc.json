@@ -25,6 +25,7 @@
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/return-await": "off",
+    "linebreak-style": ["error", "unix"],
     "import/order": [
       "error",
       {
