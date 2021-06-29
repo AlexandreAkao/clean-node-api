@@ -20,7 +20,7 @@
         "printWidth": 100,
         "semi": false,
         "tabWidth": 2
-      }      
+      }
     ],
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
@@ -34,6 +34,12 @@
           ["internal", "parent", "sibling", "index"]
         ],
         "newlines-between": "always"
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
       }
     ]
   }
