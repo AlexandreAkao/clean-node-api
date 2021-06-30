@@ -5,7 +5,7 @@ import { AddAccountRepository } from './../../../../data/protocols/add-account-r
 
 export class AccountMongoRepository implements AddAccountRepository {
   async add(accountData: AddAccountModel): Promise<AccountModel> {
-    const accountCollection = MongoHelper.getColletion('accounts')
+    const accountCollection = await MongoHelper.getColletion('accounts')
     const result = await accountCollection.insertOne(accountData)
     const account = result.ops[0]
 
