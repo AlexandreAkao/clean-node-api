@@ -136,7 +136,7 @@ describe('DbAuthentication UseCase', () => {
     expect(generateSpy).toHaveBeenCalledWith('any_id')
   })
 
-  test('Should return null if HashComparer return false', async () => {
+  test('Should throw if TokenGenerator throws', async () => {
     const { sut, tokenGeneratorStub } = makeSut()
 
     jest
@@ -144,5 +144,11 @@ describe('DbAuthentication UseCase', () => {
       .mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
     const promise = sut.auth(makeFakeAuthentication())
     await expect(promise).rejects.toThrow()
+  })
+
+  test('Should call TokenGenerator with correct id', async () => {
+    const { sut } = makeSut()
+    const accessToken = await sut.auth(makeFakeAuthentication())
+    expect(accessToken).toBe('any_token')
   })
 })
