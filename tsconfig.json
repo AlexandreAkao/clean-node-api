@@ -14,5 +14,12 @@
     "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true
-  }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }
