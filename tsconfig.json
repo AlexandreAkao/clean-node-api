@@ -13,7 +13,8 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "sourceMap": true
   },
   "include": [
     "src"
