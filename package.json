@@ -19,7 +19,8 @@
     "test:ci": "npm test -- --coverage",
     "dev": "sucrase-node src/main/server.ts",
     "dev:compose": "npm run build && docker-compose up",
-    "dev:compose:watch": "npm run build && npx concurrently --kill-others \"tsc -w\" \"docker-compose up\""
+    "dev:compose:watch": "npm run build && npx concurrently --kill-others \"tsc -w\" \"docker-compose up\"",
+    "clear_jest": "jest --clearCache"
   },
   "repository": {
     "type": "git",
