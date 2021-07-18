@@ -107,4 +107,4 @@ dist
 
 globalConfig.json
 
-data
+./data
