@@ -16,7 +16,8 @@
     "test:integration:verbose": "npm run test:verbose -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "dev": "sucrase-node src/main/server.ts"
+    "dev": "sucrase-node src/main/server.ts",
+    "dev:compose": "npm run build && docker-compose up"
   },
   "repository": {
     "type": "git",
