@@ -1,4 +1,4 @@
-import { DbAccountByToken } from './db-load-account-by-token'
+import { DbLoadAccountByToken } from './db-load-account-by-token'
 import { Decrypter } from '../../protocols/criptography/decrypter'
 import { AccountModel } from '../add-account/db-add-account-protocols'
 import { LoadAccountByTokenRepository } from '../../protocols/db/account/load-account-by-token-repository'
@@ -29,7 +29,7 @@ const makeLoadAccountByTokenRepository = (): LoadAccountByTokenRepository => {
 }
 
 interface SutTypes {
-  sut: DbAccountByToken
+  sut: DbLoadAccountByToken
   decrypterStub: Decrypter
   loadAccountByTokenRepositoryStub: LoadAccountByTokenRepository
 }
@@ -37,7 +37,7 @@ interface SutTypes {
 const makeSut = (): SutTypes => {
   const decrypterStub = makeDecrypter()
   const loadAccountByTokenRepositoryStub = makeLoadAccountByTokenRepository()
-  const sut = new DbAccountByToken(decrypterStub, loadAccountByTokenRepositoryStub)
+  const sut = new DbLoadAccountByToken(decrypterStub, loadAccountByTokenRepositoryStub)
 
   return {
     sut,
